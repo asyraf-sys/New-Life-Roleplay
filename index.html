@@ -92,32 +92,17 @@
         let cart = [];
         function addToCart(item) {
             cart.push(item);
-            alert(item + " berhasil ditambahkan!");
             const cartList = document.getElementById('cartList');
             cartList.innerHTML += `<li>✅ ${item}</li>`;
             document.getElementById('checkoutBtn').style.display = 'block';
         }
 
-function checkout() {
-    // Ganti URL di bawah dengan link spesifik channel tiket kamu
-    const ticketChannelLink = "https://discord.gg/hYRxc9nMVY"; 
-    const serverInviteLink = "https://discord.gg/NDMh5GXUP";
-
-    if(cart.length === 0) {
-        alert("Keranjang kamu masih kosong!");
-        return;
-    }
-
-    let confirmMsg = "Anda akan melakukan checkout untuk:\n" + cart.join(", ") + "\n\nKlik OK untuk membuka Ticket Channel di Discord.";
-    
-    if(confirm(confirmMsg)) {
-        // Coba buka channel, jika gagal (misal belum join server), arahkan ke invite link
-        window.open(ticketChannelLink, "_blank");
-        
-        // Opsional: Buka juga link invite sebagai cadangan di tab baru
-        window.open(serverInviteLink, "_blank");
-    }
-}
+        function checkout() {
+            if(cart.length > 0) {
+                // Langsung membuka link ticket Discord tanpa pop-up konfirmasi
+                window.open("https://discord.gg/hYRxc9nMVY", "_blank");
+            }
+        }
     </script>
 </body>
 </html>
