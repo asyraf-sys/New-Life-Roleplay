@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Life Roleplay | SAMP Server</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f13;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(15, 15, 19, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), #0f0f13), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: #ff6600;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            color: #cccccc;
+        }
+
+        /* Server IP Box */
+        .ip-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ip-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            color: #ff6600;
+            font-weight: bold;
+        }
+
+        .btn-copy {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-copy:hover {
+            background: #e05500;
+        }
+
+        /* Server Stats */
+        .stats-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 15px 30px;
+            border-radius: 6px;
+            border-left: 4px solid #ff6600;
+            text-align: left;
+        }
+
+        .stat-card h3 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: #888;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .features h2 span {
+            color: #ff6600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #16161f;
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: transform 0.3s, border 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border: 1px solid #ff6600;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            line-line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #09090c;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">NEW LIFE<span>-Roleplay</span></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#features">Fitur</a>
+            <a href="https://discord.gg/NDMh5GXUP" target="_blank">Discord</a>
+            <a href="#">Forum</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to <span>New Life Roleplay</span></h1>
+        <p>Rasakan pengalaman Roleplay terbaik dengan fitur dinamis, komunitas yang solid, dan performa server yang stabil tanpa lag.</p>
+        
+        <div class="ip-box">
+            <span class="ip-text" id="serverIp">178.83.181.201:7720</span>
+            <button class="btn-copy" onclick="copyIp()">Salin IP</button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3 id="playerCount">3 / 50</h3>
+                <p>Pemain Online</p>
+            </div>
+            <div class="stat-card">
+                <h3>Uptime 99%</h3>
+                <p>Server Status</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Kenapa Memilih <span>Server Kami?</span></h2>
+        <div class="grid">
+            <div class="feature-card">
+                <div class="feature-icon">🏎️</div>
+                <h3>Sistem Kendaraan Realistis</h3>
+                <p>Modifikasi kendaraan Anda dengan sistem kustomisasi mendalam, asuransi, dan sistem bensin yang realistis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Beragam Pekerjaan</h3>
+                <p>Pilih jalan hidupmu. Menjadi polisi, dokter, mekanik, atau bangun kekaisaran bisnis ilegal Anda sendiri.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Sistem Properti</h3>
+                <p>Miliki rumah, apartemen, atau bisnis. Desain interior sesukamu dengan sistem furnitur kustom kami.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 New Life Roleplay. All Rights Reserved. Designed for SAMP Client PC.</p>
+    </footer>
+
+    <script>
+        function copyIp() {
+            const ipText = document.getElementById('serverIp').innerText;
+            navigator.clipboard.writeText(ipText).then(() => {
+                alert('IP Server berhasil disalin: ' + ipText);
+            }).catch(err => {
+                console.error('Gagal menyalin text: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
